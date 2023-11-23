@@ -7,18 +7,51 @@
     <title>Nikhil Dhokare - Personal Webpage</title>
     <style>
         body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: inherit;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-image: url(https://imgs.search.brave.com/a1ic8D_E-MeRT9TDwSbzkDNWfAdzuSmm_85qrquE_2A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJlL2M4/L2NiLzJlYzhjYmY1/N2RkNTVlNzAwNjU4/OGJhMTM4MDBkM2Q5/LmpwZw); /* Add the path to your top background image */
+            background-image: url(https://imgs.search.brave.com/a1ic8D_E-MeRT9TDwSbzkDNWfAdzuSmm_85qrquE_2A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJlL2M4/L2NiLzJlYzhjYmY1/N2RkNTVlNzAwNjU4/OGJhMTM4MDBkM2Q5/LmpwZw);
+            /* Add the path to your top background image */
             background-size: cover;
             color: #fff;
             text-align: center;
             padding: 1em;
+            overflow: hidden; /* Ensure the text doesn't overflow */
+        }
+
+        header h1 {
+            font-size: 95px; /* Adjust the font size as needed */
+        }
+
+        header h1.animate-character {
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                -225deg,
+                #231557 0%,
+                #44107a 29%,
+                #ff1361 67%,
+                #fff800 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
         }
 
         footer {
@@ -34,7 +67,6 @@
             margin: 20px;
         }
 
-        h1,
         h2 {
             color: #df2d2d;
         }
@@ -53,7 +85,8 @@
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
-            background-image: url(https://imgs.search.brave.com/a1ic8D_E-MeRT9TDwSbzkDNWfAdzuSmm_85qrquE_2A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJlL2M4/L2NiLzJlYzhjYmY1/N2RkNTVlNzAwNjU4/OGJhMTM4MDBkM2Q5/LmpwZw); /* Add the path to your mid background image */
+            background-image: url(https://imgs.search.brave.com/a1ic8D_E-MeRT9TDwSbzkDNWfAdzuSmm_85qrquE_2A/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJlL2M4/L2NiLzJlYzhjYmY1/N2RkNTVlNzAwNjU4/OGJhMTM4MDBkM2Q5/LmpwZw);
+            /* Add the path to your mid background image */
             background-size: cover;
             padding: 20px;
             border-radius: 10px;
@@ -70,7 +103,8 @@
             border-radius: 50%;
             margin: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 1s cubic-bezier(0.5, 1, 0.89, 1);
+            position: relative; /* Added position relative */
         }
 
         .link-buttons img {
@@ -81,6 +115,7 @@
 
         .link-buttons a:hover {
             background-color: #2980b9;
+            transform: scale(1.1);
         }
 
         .content-creator-info {
@@ -134,19 +169,39 @@
 <body>
 
     <header>
-        <h1>Nikhil Dhokare</h1>
-        <p>First Year Computer Science Engineering Student at MIT College Alandi</p>
-        <p>Passionate about programming and exploring the world of technology.</p>
+        <h1 class="animate-character">Nikhil Dhokare</h1>
+        <p>
+            <span>First</span>
+            <span>Year</span>
+            <span>Computer</span>
+            <span>Science</span>
+            <span>Engineering</span>
+            <span>Student</span>
+            <span>at</span>
+            <span>MIT</span>
+            <span>College</span>
+            <span>Alandi</span>
+            <br>
+            <span>Passionate</span>
+            <span>about</span>
+            <span>programming</span>
+            <span>and</span>
+            <span>exploring</span>
+            <span>the</span>
+            <span>world</span>
+            <span>of</span>
+            <span>technology.</span>
+        </p>
     </header>
 
     <section class="link-buttons">
         <a href="YourPortfolioLink" target="_blank"><img src=https://cathygregory.com/portfoliogallerystl.org/images/all-colors/Portfolio-Gallery-circle-Logo-300.png alt="Portfolio"></a>
         <a href="https://www.codechef.com/users/nikhildhokare" target="_blank"><img src=https://s3.amazonaws.com/discourseproduction/original/1X/ba28115bd3d5badf6cce0eb175d5875dadee3b12.png
                 alt="Codechef"></a>
-        <a href="https://l1nk.dev/viqZM" target="_blank"><img src=https://www.shareicon.net/data/2016/07/13/606885_linkedin_2048x2048.png alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/nikhil-dhokare-2b4880259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img src=https://www.shareicon.net/data/2016/07/13/606885_linkedin_2048x2048.png alt="LinkedIn"></a>
         <a href="https://www.instagram.com/nikhil.editzz/" target="_blank"><img src=https://www.pngkey.com/png/full/283-2831746_insta-icon-instagram.png
                 alt="Instagram"></a>
-            <!-- Add more links as needed -->
+        <!-- Add more links as needed -->
     </section>
 
     <section class="content-creator-info">
@@ -162,9 +217,9 @@
             <button type="submit">Submit</button>
         </form>
     </section>
-<footer>
-    <p>&copy; 2023 Nikhil Dhokare | Personal Webpage</p>
-</footer>
+    <footer>
+        <p>&copy; 2023 Nikhil Dhokare | Personal Webpage</p>
+    </footer>
 
 </body>
 
